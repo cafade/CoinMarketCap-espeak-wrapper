@@ -1,0 +1,10 @@
+[Unit]
+Description=Run service for CMC data to text to speech
+
+[Timer]
+OnCalendar=*-*-* 09,18:00:00
+Persistent=true
+Unit=cmc-espeak.service
+
+[Install]
+WantedBy=timers.target
