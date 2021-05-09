@@ -3,4 +3,5 @@ Description=Get Ethereum price from CMC and say it with espeak
 
 [Service]
 Type=oneshot
-ExecStart=~/.local/bin/cmc_espeak.sh
+Environment=$HOME=%h
+ExecStart=/bin/bash -c "source ~/.cmc_env && exec ~/.local/bin/cmc_espeak.sh"
